@@ -354,7 +354,7 @@ class QaCrablineLocalMockTransport extends QaStateBackedTransportAdapter {
           }),
         };
       default:
-        throw new Error(`unsupported Crabline local mock action: ${_params.action}`);
+        throw new Error(`unsupported Crabline local mock action: ${String(_params.action)}`);
     }
   };
 

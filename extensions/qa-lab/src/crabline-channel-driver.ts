@@ -306,8 +306,8 @@ export async function runQaCrablineChannelDriverSmoke(
     const registry = runtime.createRegistry(manifest, manifestPath);
     const fixtureId = `qa-crabline-${selection.channel}`;
     const provider = registry.resolve(selection.channel, fixtureId);
-    const fixture = manifest.fixtures[0]!;
-    const config = manifest.providers[selection.channel]!;
+    const fixture = manifest.fixtures[0];
+    const config = manifest.providers[selection.channel];
     try {
       const probe = await provider.probe({
         config,
